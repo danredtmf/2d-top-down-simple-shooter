@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3ndu767a0lxw"]
+
+[ext_resource type="Script" path="res://secondary/game_manager/game_manager.gd" id="1_h624l"]
+
+[node name="GameManager" type="Node2D" groups=["GameTimer"]]
+script = ExtResource("1_h624l")

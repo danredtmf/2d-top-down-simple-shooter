@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dipgsw5jvuf6f"]
+
+[ext_resource type="Script" path="res://secondary/player/player.gd" id="1_luf34"]
+[ext_resource type="Texture2D" uid="uid://dygpwu3vyytb8" path="res://icon.svg" id="1_yljcm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3q7x"]
+size = Vector2(30, 30)
+
+[node name="Player" type="Area2D" groups=["Player"]]
+script = ExtResource("1_luf34")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_yljcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w3q7x")
+
+[node name="ShootDelay" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true

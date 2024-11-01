@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds3rjweys12fm"]
+
+[ext_resource type="Texture2D" uid="uid://dygpwu3vyytb8" path="res://icon.svg" id="1_nugjf"]
+[ext_resource type="Script" path="res://secondary/enemy/enemy.gd" id="1_q3qrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_571ro"]
+size = Vector2(32, 32)
+
+[node name="Enemy" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_q3qrq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_nugjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_571ro")
+
+[node name="DamageDelay" type="Timer" parent="."]
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="timeout" from="DamageDelay" to="." method="_on_damage_delay_timeout"]

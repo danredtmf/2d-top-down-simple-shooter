@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmsf2ib0u03mg"]
+
+[ext_resource type="Script" path="res://secondary/game_timer/game_timer.gd" id="1_mrr62"]
+
+[node name="GameTimer" type="Node2D" groups=["GameTimer"]]
+script = ExtResource("1_mrr62")
+
+[node name="Delay" type="Timer" parent="."]
+
+[connection signal="timeout" from="Delay" to="." method="_on_delay_timeout"]
