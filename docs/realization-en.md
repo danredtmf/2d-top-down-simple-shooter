@@ -156,7 +156,7 @@ func _check_damage() -> void:
 The structure will be as follows:
 
 - `Bullet` (type `Area2D`)
-  - `Sprite2D`: used `icon.svg` as the sprite, enabled `Region`, `region_rect`: `(x: 34, y: 40, w: 60, h: 60)`, node scale: `(x: 0.1, y: 0.1)`, `modulate` (Visibility tab): `00ff00` (green)
+  - `Sprite2D`: used `icon.svg` as the sprite, enabled `Region`, `region_rect`: `(x: 34, y: 40, w: 60, h: 60)`, node scale: `(x: 0.1, y: 0.1)`, `modulate` (`Visibility` tab): `00ff00` (green)
   - `CollisionShape2D` (using `RectangleShape2D` with a size of `(x: 7, y: 7)`)
   - `VisibleOnScreenNotifier2D`
   - `Timer` (`One Shot`: `true`)
@@ -218,7 +218,7 @@ func _physics_process(delta: float) -> void:
 The structure will be as follows:
 
 - `Enemy` (type `Area2D`)
-  - `Sprite2D`: used `icon.svg` as the sprite, node scale: `(x: 0.25, y: 0.25)`, `modulate` (Visibility tab): `ff0000` (red)
+  - `Sprite2D`: used `icon.svg` as the sprite, node scale: `(x: 0.25, y: 0.25)`, `modulate` (`Visibility` tab): `ff0000` (red)
   - `CollisionShape2D` (using `RectangleShape2D` with a size of `(x: 32, y: 32)`)
   - `DamageDelay` (type `Timer`; `One Shot`: `true`)
 
@@ -302,7 +302,7 @@ func _on_damage_delay_timeout() -> void:
 [Back to Contents](#table-of-contents)
 > As you read, you might have already tested the player, bullet, and enemy functionality, but maybe some questions arose.
 
-Return to the `Game` scene, click on the `Level` node, `Right-click` ➡ `Instantiate Child Scene…`, to add objects to the level. For example, after adding `Player` to the level, let's move it to the center of the screen by changing the `position` to `(x: 1280 / 2, y: 720 / 2)`, and place `Enemy` somewhere near the player, go to the enemy's properties and find the `Player` property. As I mentioned in the enemy's code comments, `@export` allows you to see the variable `player` at the editor level.
+Return to the `Game` scene, click on the `Level` node, `Right-click` ➡ `Instantiate Child Scene...`, to add objects to the level. For example, after adding `Player` to the level, let's move it to the center of the screen by changing the `position` to `(x: 1280 / 2, y: 720 / 2)`, and place `Enemy` somewhere near the player, go to the enemy's properties and find the `Player` property. As I mentioned in the enemy's code comments, `@export` allows you to see the variable `player` at the editor level.
 
 Click on the `Assign...` button next to the `Player` property and in the opened node selection window, select the single `Player` node on the level.
 
