@@ -1,6 +1,3 @@
----
-languages: RU, [EN](idea-en.md)
----
 # Идея
 
 Простой 2D Top-Down Shooter

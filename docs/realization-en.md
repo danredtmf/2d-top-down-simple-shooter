@@ -1,6 +1,5 @@
 ---
 version: 4.3-stable
-languages: EN, [RU](realization-ru.md)
 ---
 # Realization
 
